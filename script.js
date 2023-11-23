@@ -6,7 +6,7 @@ let listItem = document.getElementById('ul');
 
 function populateStorage(e){
     e.preventDefault();
-    // localStorage.setItem('name', 'John Doe');
+
     localStorage.setItem('name', 'John Doe');
 
     let name = localStorage.getItem('name');
