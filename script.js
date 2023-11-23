@@ -1,4 +1,4 @@
-function localStorage(){
+function populateStorage(){
     localStorage.setItem('name', 'John Doe');
 
     const name = localStorage.getItem('name');
@@ -6,4 +6,4 @@ function localStorage(){
     console.log(name);
 }
 
-localStorage();
+populateStorage();
