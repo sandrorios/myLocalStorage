@@ -11,6 +11,13 @@ function addItem(e){
         alert("Please add an Item");
         return;
     }
+
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(newItem));
+    listItem.appendChild(li);
+
+    inputField.value = '';
+    inputField.focus();
 }
 
 
