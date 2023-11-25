@@ -36,3 +36,12 @@ header h1 {
     border-radius: 5px;
     padding: 10px;
 }
+
+#filter {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: transparent;
+}
