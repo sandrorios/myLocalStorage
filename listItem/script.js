@@ -20,6 +20,8 @@ function addItem(e){
     li.appendChild(button);
     inputField.value = '';
     inputField.focus();
+
+    checkUI();
 }
 
 function createButton(classes) {
@@ -40,14 +42,29 @@ function removeItem(e) {
     if(e.target.parentElement.classList.contains('remove-item')){
         e.target.parentElement.parentElement.remove();
     }
+    checkUI()
 }
 
 function clearItems(){
     while(listItem.firstChild){
         listItem.firstChild.remove(listItem.firstChild);
     }
+    checkUI()
+}
+
+function checkUI(){
+    let items = listItem.querySelectorAll('li');
+    if(items.length === 0){
+        filterItem.style.display = "none";
+        clearBtn.style.display = "none";
+    }else{
+        filterItem.style.display = 'block';
+        clearBtn.style.display = 'block';
+    }
 }
 
 clearBtn.addEventListener('click', clearItems);
 listItem.addEventListener('click', removeItem);
 formItem.addEventListener('submit', addItem);
+
+checkUI();
